@@ -1,0 +1,73 @@
+# Maven
+target/
+!target/jwt-auth-service-0.0.1-SNAPSHOT.jar
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+dependency-reduced-pom.xml
+
+# Logs
+*.log
+logs/
+*.out
+
+# Test reports
+/test-output/
+sure-fire-reports/
+
+# Spring Boot
+*.properties
+application-*.yml
+application-*.yaml
+
+# Configuraciones de IDE
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### Eclipse ###
+.metadata/
+.recommenders/
+*.launch
+.settings/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# Sistema Operativo(específico)
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Archivos generados/compilados
+*.class
+*.war
+*.ear
+_build/
+compile_output/
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.properties

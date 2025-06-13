@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: jwt_auth_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: jwt_auth_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  jwt-auth-service:
+    build: .
+    container_name: jwt_auth_service
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/jwt_auth_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      JWT_SECRET: supersecretkeyjwtforprojectjuanjo1234supersecretkeyjwtforprojectjuanjo1234
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
