@@ -56,8 +56,8 @@ Este es un microservicio genérico de autenticación de usuarios desarrollado co
    Ejecuta el siguiente comando:
 
    ```bash
-   git clone https://github.com/juanjooriveroo/jwt-auth-service.git
-   cd jwt-auth-service
+   git clone https://github.com/juanjooriveroo/jwt-auth-microservice.git
+   cd jwt-auth-microservice
    ```
 
 2. **Construir y levantar los contenedores:**  
